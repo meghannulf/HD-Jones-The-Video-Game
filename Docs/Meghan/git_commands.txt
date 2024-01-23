@@ -15,3 +15,9 @@ git add "Path/to/file or file_name"
 git commit -m "Pushing file for <branch_name>"
 
 git push
+
+To merge two branches:
+
+git checkout [branchYouWantToReceiveBranch] //checkout branch to receive branch
+
+git merge [branchYouWantToMergeIntoBranch]
