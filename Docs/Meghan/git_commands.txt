@@ -1,6 +1,6 @@
 git branch "<branch_name>"
 
-git checkout -b
+git checkout -a
 
 git checkout <branch_name>
 
