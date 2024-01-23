@@ -8,9 +8,10 @@ git checkout <branch_name>
 TO COMMIT ON YOUR BRANCH
 
 """make your file"""
+git checkout <branch_name> //make the new branch
 
-git add "path_to_file"
+git add "Path/to/file or file_name" 
 
-git commit -m "Message for on your branch for what you're pushing"
+git commit -m "Pushing file for <branch_name>"
 
 git push
