@@ -55,7 +55,7 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            //healthbar.SetHealth(health - 10);
+            // healthbar.SetHealth(health - 10);
             Destroy(other.gameObject);
             target = null;
         }
