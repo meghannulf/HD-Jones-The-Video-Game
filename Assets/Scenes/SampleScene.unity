@@ -792,7 +792,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -252, y: 167}
+  m_AnchoredPosition: {x: -221, y: 144}
   m_SizeDelta: {x: 143.825, y: 25.8266}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1126388577
@@ -901,6 +901,7 @@ GameObject:
   - component: {fileID: 1317715506}
   - component: {fileID: 1317715508}
   - component: {fileID: 1317715507}
+  - component: {fileID: 1317715509}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -940,6 +941,7 @@ MonoBehaviour:
   firePoint: {fileID: 846298393}
   fireForce: 20
   isFiring: 0
+  bulletLifetime: 5
 --- !u!212 &1317715508
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -992,6 +994,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1317715509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317715505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6fa929528599c34c92eeac3baffdece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 3105283455844647785, guid: c771de000f7dcb54598ccd7a26e77c3a, type: 3}
+  firePoint: {fileID: 846298393}
+  fireForce: 20
+  isFiring: 0
+  bulletLifetime: 3
 --- !u!1 &1383213162
 GameObject:
   m_ObjectHideFlags: 0
