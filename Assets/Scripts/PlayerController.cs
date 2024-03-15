@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-//using Weaponspace; 
 
 namespace Playerspace
 {
@@ -17,22 +16,22 @@ namespace Playerspace
         List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
 
         //For shooting
-        //public Weaponspace.Weapon weapon = new Weaponspace.Weapon();
-        public Weapon weapon; 
+        public Weapon weapon = new Weapon();
         Vector2 moveDirection;
         Vector2 mousePosition;
 
         void Start()
         {
             rb = GetComponent<Rigidbody2D>();
+            weapon.Initialize(this);
         }
 
         public bool isFiring = false;
 
-        public void StartFiring(MonoBehaviour monoBehaviour)
+        public void StartFiring()
         {
             isFiring = true;
-            monoBehaviour.StartCoroutine(FireCoroutine());
+            StartCoroutine(FireCoroutine());
         }
 
         public void StopFiring()
@@ -56,7 +55,7 @@ namespace Playerspace
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                StartFiring(this);
+                StartFiring();
             }
             else if (Input.GetKeyUp(KeyCode.Space))
             {
@@ -89,6 +88,99 @@ namespace Playerspace
         }
     }
 }
+
+
+// using System.Collections;
+// using System.Collections.Generic;
+// using UnityEngine;
+// using UnityEngine.InputSystem;
+// //using Weaponspace; 
+
+// namespace Playerspace
+// {
+//     public class PlayerController : MonoBehaviour
+//     {
+//         //For movement
+//         public float moveSpeed = 1f;
+//         public float collisionOffset = 0.05f;
+//         public ContactFilter2D movementFilter;
+//         public Vector2 movementInput;
+//         Rigidbody2D rb;
+//         List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
+
+//         //For shooting
+//         //public Weaponspace.Weapon weapon = new Weaponspace.Weapon();
+//         public Weapon weapon = new Weapon(); 
+//         Vector2 moveDirection;
+//         Vector2 mousePosition;
+
+//         void Start()
+//         {
+//             rb = GetComponent<Rigidbody2D>();
+//         }
+
+//         public bool isFiring = false;
+
+//         public void StartFiring(MonoBehaviour monoBehaviour)
+//         {
+//             isFiring = true;
+//             monoBehaviour.StartCoroutine(FireCoroutine());
+//         }
+
+//         public void StopFiring()
+//         {
+//             isFiring = false;
+//         }
+
+//         IEnumerator FireCoroutine()
+//         {
+//             while (isFiring)
+//             {
+//                 weapon.Fire();
+//                 yield return new WaitForSeconds(0.3f); //Adjust the delay between shots 
+//             }
+//         }
+
+//         void Update()
+//         {
+//             float moveX = Input.GetAxisRaw("Horizontal");
+//             float moveY = Input.GetAxisRaw("Vertical");
+
+//             if (Input.GetKeyDown(KeyCode.Space))
+//             {
+//                 StartFiring(this);
+//             }
+//             else if (Input.GetKeyUp(KeyCode.Space))
+//             {
+//                 StopFiring();
+//             }
+//             moveDirection = new Vector2(moveX, moveY).normalized;
+//             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+//         }
+
+//         void FixedUpdate()
+//         {
+//             if (movementInput != Vector2.zero)
+//             {
+//                 int count = rb.Cast(movementInput, movementFilter, castCollisions, moveSpeed * Time.fixedDeltaTime + collisionOffset);
+//                 if (count == 0)
+//                 {
+//                     rb.MovePosition(rb.position + movementInput * moveSpeed * Time.fixedDeltaTime);
+//                 }
+//             }
+
+//             rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+//             Vector2 aimDirection = mousePosition - rb.position;
+//             float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
+//             rb.rotation = aimAngle;
+//         }
+
+//         void OnMove(InputValue movementValue)
+//         {
+//             movementInput = movementValue.Get<Vector2>();
+//         }
+//     }
+// }
 
 // using System.Collections;
 // using System.Collections.Generic;
