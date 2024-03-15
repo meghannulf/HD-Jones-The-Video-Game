@@ -17,7 +17,6 @@ public class BulletStressTest
     * Summary: Sets up the scene for testing
     */
     [SetUp]
-
     public void Setup()
     {   // load dummy scene
         SceneManager.LoadScene("TestingScene");
@@ -29,9 +28,13 @@ public class BulletStressTest
     [UnityTest]
     public IEnumerator StressTestBullet()
     {   
+        //Assign
         // create bullet object to instantiate
         GameObject bulletObj = new GameObject("Bullet", typeof(BoxCollider2D), typeof(SpriteRenderer));
         int i = 0; 
+
+
+        //Act
         // repeatedly spawn bulletObj
         while (i < int.MaxValue){
             GameObject.Instantiate(bulletObj); // make a new instance, increment the counter i, log the amount of instances
@@ -40,12 +43,14 @@ public class BulletStressTest
             yield return null;
         }
         yield return null; // should freeze before ever reaching here
+
+        //Assert 
         Assert.True(false); // if it does reach here then something went wrong with the test
     }
 
     [TearDown]
     public void Teardown()
     {
-        SceneManager.UnloadSceneAsync("TestingScene");
+       // SceneManager.UnloadSceneAsync("TestingScene");
     }
 }
