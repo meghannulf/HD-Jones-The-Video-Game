@@ -9,6 +9,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 // logged 9073 of instances before freezing
 public class BulletStressTest
@@ -46,5 +47,11 @@ public class BulletStressTest
 
         //Assert 
         Assert.True(false); // if it does reach here then something went wrong with the test
+    }
+
+    [TearDown]
+    public void Teardown()
+    {
+       // SceneManager.UnloadSceneAsync("TestingScene");
     }
 }
