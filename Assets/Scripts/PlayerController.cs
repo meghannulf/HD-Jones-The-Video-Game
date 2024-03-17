@@ -8,7 +8,7 @@ namespace Playerspace
     public class PlayerController : MonoBehaviour
     {
         //For movement
-        public float moveSpeed = 1f;
+        public float moveSpeed = 10f;
         public float collisionOffset = 0.05f;
         public ContactFilter2D movementFilter;
         public Vector2 movementInput;
@@ -19,6 +19,8 @@ namespace Playerspace
         public Weapon weapon = new Weapon();
         Vector2 moveDirection;
         Vector2 mousePosition;
+
+
 
         void Start()
         {
@@ -37,6 +39,17 @@ namespace Playerspace
         public void StopFiring()
         {
             isFiring = false;
+        }
+
+        void OnCollisionEnter2D(Collision2D collision)
+        {
+            // Check if the collided object has the "Boundary" tag
+            if (collision.gameObject.CompareTag("Boundary"))
+            {
+                // Reset player's velocity to zero to prevent further movement
+                Debug.Log("Collision with boundary!");
+                rb.velocity = Vector2.zero;
+            }
         }
 
         IEnumerator FireCoroutine()

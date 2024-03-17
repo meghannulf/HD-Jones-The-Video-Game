@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - TestBullet
   - Obstacle
+  - Boundary
   layers:
   - Default
   - TransparentFX
