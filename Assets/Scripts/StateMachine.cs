@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CircleColorChanger : MonoBehaviour
+public class HDJAnimation : MonoBehaviour
 {
     public float moveSpeed = 5f; // Speed of movement
     public Color idleColor = Color.white; // Color when not moving
