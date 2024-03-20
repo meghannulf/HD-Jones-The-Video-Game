@@ -661,12 +661,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  idleColor: {r: 1, g: 1, b: 1, a: 1}
-  movingColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  leftColor: {r: 1, g: 0, b: 0, a: 1}
-  rightColor: {r: 0, g: 1, b: 0, a: 1}
-  upColor: {r: 0, g: 0, b: 1, a: 1}
-  downColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!95 &936153469
 Animator:
   serializedVersion: 5
