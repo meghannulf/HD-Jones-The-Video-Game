@@ -789,12 +789,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  idleColor: {r: 1, g: 1, b: 1, a: 1}
-  movingColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  leftColor: {r: 1, g: 0, b: 0, a: 1}
-  rightColor: {r: 0, g: 1, b: 0, a: 1}
-  upColor: {r: 0, g: 0, b: 1, a: 1}
-  downColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+--- !u!95 &936153469
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936153454}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2ffe0ad32d30be7448332419a5454a04, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1126388575
 GameObject:
   m_ObjectHideFlags: 0
@@ -1344,6 +1359,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 402281997912811417, guid: 80cc7690a69b44db8ac9fb41f0044247, type: 3}
       insertIndex: -1
       addedObject: {fileID: 936153463}
+    - targetCorrespondingSourceObject: {fileID: 402281997912811417, guid: 80cc7690a69b44db8ac9fb41f0044247, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 936153469}
   m_SourcePrefab: {fileID: 100100000, guid: 80cc7690a69b44db8ac9fb41f0044247, type: 3}
 --- !u!1001 &1859601549408608885
 PrefabInstance:
