@@ -488,7 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -776,7 +776,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -221, y: 144}
+  m_AnchoredPosition: {x: -281, y: 170.97}
   m_SizeDelta: {x: 143.825, y: 25.8266}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1126388577
@@ -1247,6 +1247,10 @@ PrefabInstance:
       propertyPath: weapon
       value: 
       objectReference: {fileID: 1317715507}
+    - target: {fileID: 7721249074905512170, guid: 80cc7690a69b44db8ac9fb41f0044247, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7721249074905512170, guid: 80cc7690a69b44db8ac9fb41f0044247, type: 3}
       propertyPath: moveSpeed
       value: 10

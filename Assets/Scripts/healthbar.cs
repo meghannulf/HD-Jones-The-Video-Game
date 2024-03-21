@@ -5,20 +5,19 @@ using UnityEngine.UI;
 
 public class healthbar : MonoBehaviour
 {
-    public Slider slider;
-    private int maxHealth = 50;
+   public Slider slider;
     public Gradient gradient;
     public Image fill;
-    
-    public void Start(){
-        slider.maxValue = maxHealth;
-        slider.value = maxHealth;
-        
-        fill.color = gradient.Evaluate(1f); //sets bar green at start
-    }
 
+    public void SetMaxHealth(int health){
+        slider.maxValue = health;
+        slider.value = health;
+
+        // Sets health bar to green at start
+        fill.color = gradient.Evaluate(1f);
+    }
     public void SetHealth(int health){
         slider.value = health;
-        fill.color = gradient.Evaluate(slider.normalizedValue);
+        fill.color = gradient.Evaluate(slider.normalizedValue); //normalized changes slider value so it's on the same scale 0-1
     }
 }

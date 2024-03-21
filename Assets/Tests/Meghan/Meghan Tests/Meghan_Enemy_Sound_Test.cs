@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 ﻿//using System.Collections;
 //using NUnit.Framework;
 //using UnityEngine;
 //using UnityEngine.SceneManagement;
 //using UnityEngine.TestTools;
+=======
+﻿/*using System.Collections;
+using NUnit.Framework;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.TestTools;
+>>>>>>> a434911ff7f2fda34fa91af845b756d88cf55b62
 
 //public class EnemySoundTest
 //{
@@ -61,6 +69,7 @@
 //        GameObject.Destroy(bulletPrefab);
 //    }
 
+<<<<<<< HEAD
 //    [UnityTest]
 //    public IEnumerator ChampionSoundBoundaryTest()
 //    {
@@ -104,3 +113,8 @@
 //        championSound.volume = originalVolume; // Reset the volume
 //    }
 //}
+=======
+        championSound.volume = originalVolume; // Reset the volume
+    }
+}*/
+>>>>>>> a434911ff7f2fda34fa91af845b756d88cf55b62
