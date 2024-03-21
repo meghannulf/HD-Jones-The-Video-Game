@@ -10,10 +10,15 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float RotateSpeed = 0.0025f;
     private Rigidbody2D rb;
     private int EnemyHealth = 3;
+    //Meghan codeline
+    private AudioSource enemy_noise;
+
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        //Meghan code
+        enemy_noise = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -58,10 +63,14 @@ public class Enemy : MonoBehaviour
             // healthbar.SetHealth(health - 10);
             Destroy(other.gameObject);
             target = null;
+
         }
         else if (other.gameObject.CompareTag("Bullet"))
         {
             EnemyHealth--;
+            //Meghan code
+            enemy_noise.Play();
+
             Destroy(other.gameObject);
             if (EnemyHealth == 0)
             {

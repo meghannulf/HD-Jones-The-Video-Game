@@ -12,6 +12,9 @@ public class Weapon : MonoBehaviour
     public Transform firePoint;
     public float fireForce = 20f;
 
+    //Meghan sound
+    public AudioSource audioSource;
+
     public bool isFiring = false;
 
     public float bulletLifetime = 3f;
@@ -38,6 +41,15 @@ public class Weapon : MonoBehaviour
         GameObject bullet = GameObject.Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
         bulletRb.AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
+
+        //Meghan sound code
+        // Play bullet sound if AudioSource is not null
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
+
 
         // Destroy bullet after a certain amount of time
         GameObject.Destroy(bullet, bulletLifetime);
