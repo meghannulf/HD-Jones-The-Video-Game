@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 5fccb263c15944a51a19b7823c6c01f2
+  - enabled: 1
+    path: Assets/Scenes/JonTestScene.unity
+    guid: 55df1f805e4024aaba5fcde66607a565
   m_configObjects: {}
