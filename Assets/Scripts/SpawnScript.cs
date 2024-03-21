@@ -10,7 +10,7 @@ public class SpawnScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < spawnLocations.Length; i++)
+        for (int i = 0; i < Random.Range(2, 4); i++)
         {
             Instantiate(spawnObjects[Random.Range(0, spawnObjects.Length)], spawnLocations[Random.Range(0, spawnLocations.Length)]);
         }

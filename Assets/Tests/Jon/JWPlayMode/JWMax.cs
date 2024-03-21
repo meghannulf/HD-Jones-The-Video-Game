@@ -27,9 +27,9 @@ public class JWMax
         GameObject[] kpPrefabs = GameObject.FindGameObjectsWithTag("PowerUp");
 
         // Check if no more than 4 "KP" prefabs have spawned
-        if (kpPrefabs.Length >= 4)
+        if (kpPrefabs.Length > 4)
         {
-            Assert.Fail("No More than 4 KP prefabs have spawned!");
+            Assert.Fail("More than 4 KP prefabs have spawned!");
         }
         else
         {
