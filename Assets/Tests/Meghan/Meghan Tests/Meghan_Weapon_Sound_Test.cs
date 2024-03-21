@@ -6,13 +6,16 @@ using UnityEngine.TestTools;
 
 public class WeaponSoundTest
 {
-    private GameObject weaponGameObject;
-    public Weapon weaponScript;
+    //private GameObject weaponGameObject;
+    //public Weapon weaponScript;
 
     [SetUp]
     public void Setup()
     {
         // Load the scene asynchronously
+        GameObject gameObject = new GameObject();
+        gameObject.AddComponent<Weapon>();
+        //Weapon weaponScript;
         SceneManager.LoadSceneAsync("TestingScene", LoadSceneMode.Single).completed += SceneLoaded;
     }
 
