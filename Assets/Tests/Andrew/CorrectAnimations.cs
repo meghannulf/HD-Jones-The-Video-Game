@@ -36,8 +36,6 @@ public class AnimationTriggerTest
         // Check if the player's idle animation is playing by default
         Assert.IsTrue(playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle"), "Player is not in Idle state by default");
 
-        // Trigger an action that should change the animation state, for example, moving the player
-        // Simulate movement by setting a parameter that triggers a movement animation
         playerAnimator.SetFloat("Speed", 1.0f);
 
         // Wait for a few frames to allow the animation to transition
@@ -46,8 +44,6 @@ public class AnimationTriggerTest
         // Check if the player's movement animation is playing
         Assert.IsTrue(playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("RunningUp"), "Player is not in Run state after moving");
 
-        // Trigger another action or condition that should change the animation state
-        // For example, stopping the player's movement
         playerAnimator.SetFloat("Speed", 0.0f);
 
         // Wait for a few frames to allow the animation to transition
