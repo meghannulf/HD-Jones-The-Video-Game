@@ -4,10 +4,12 @@ using Playerspace;
 
 public class Weapon : MonoBehaviour
 {
+    private static Weapon _instance;
+    public static Weapon Instance { get { return _instance; } }
     // Reference to the player controller
     private PlayerController playerController;
 
-    //K's weapon class 
+    //K's weapon class
     public GameObject bulletPrefab;
     public Transform firePoint;
     public float fireForce = 20f;
