@@ -1,15 +1,11 @@
 {
-    "name": "RebeccaPlayMode",
+    "name": "Main",
     "rootNamespace": "",
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-<<<<<<< HEAD
-        "main"
-=======
-        "ScriptAssembly",
-        "Main"
->>>>>>> 8c1c696d7279c28e8d9708517574164ffa19b89f
+        "Unity.TextMeshPro",
+        "Unity.InputSystem"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
@@ -18,7 +14,7 @@
     "precompiledReferences": [
         "nunit.framework.dll"
     ],
-    "autoReferenced": false,
+    "autoReferenced": true,
     "defineConstraints": [
         "UNITY_INCLUDE_TESTS"
     ],

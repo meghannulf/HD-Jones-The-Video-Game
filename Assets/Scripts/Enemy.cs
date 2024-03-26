@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
     public Transform target;
     [SerializeField] public float speed = 3f;
     [SerializeField] private float RotateSpeed = 0.0025f;
+    private static Enemy _instance;
+    public static Enemy Instance { get { return _instance; } }
     private Rigidbody2D rb;
     private int EnemyHealth = 3;
     //Meghan codeline
