@@ -95,6 +95,7 @@ public class Enemy : MonoBehaviour
             EnemyHealth--;
             //Meghan code
             enemyNoise.Play();
+            Debug.Log("Bullet Hit");
 
             Destroy(other.gameObject);
             if (EnemyHealth == 0)
