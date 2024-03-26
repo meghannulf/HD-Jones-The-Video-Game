@@ -6,19 +6,24 @@
 
 //public class WeaponSoundTest
 //{
+<<<<<<< HEAD
 //    //private GameObject weaponGameObject;
 //    //public Weapon weaponScript;
+=======
 //    private GameObject weaponGameObject;
 //    public Weapon weaponScript;
+>>>>>>> 8c1c696d7279c28e8d9708517574164ffa19b89f
 
 //    [SetUp]
 //    public void Setup()
 //    {
 //        // Load the scene asynchronously
+<<<<<<< HEAD
 //        GameObject gameObject = new GameObject();
 //        gameObject.AddComponent<Weapon>();
 //        //Weapon weaponScript;
-
+=======
+>>>>>>> 8c1c696d7279c28e8d9708517574164ffa19b89f
 //        SceneManager.LoadSceneAsync("TestingScene", LoadSceneMode.Single).completed += SceneLoaded;
 //    }
 

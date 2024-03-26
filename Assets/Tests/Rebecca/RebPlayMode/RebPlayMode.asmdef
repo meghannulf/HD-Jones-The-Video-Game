@@ -4,12 +4,7 @@
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-<<<<<<< HEAD
         "main"
-=======
-        "ScriptAssembly",
-        "Main"
->>>>>>> 8c1c696d7279c28e8d9708517574164ffa19b89f
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

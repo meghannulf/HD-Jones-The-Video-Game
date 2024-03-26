@@ -1,14 +1,15 @@
 
-using System.Collections;
-using NUnit.Framework;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.TestTools;
+//using System.Collections;
+//using NUnit.Framework;
+//using UnityEngine;
+//using UnityEngine.SceneManagement;
+//using UnityEngine.TestTools;
 
+<<<<<<< HEAD
 public class EnemySoundTest
 {
     //private GameObject enemyGameObject;
-    // private Enemy enemyScript;
+// private Enemy enemyScript;
 
     [SetUp]
     public void Setup()
@@ -28,7 +29,7 @@ public class EnemySoundTest
 
         GameObject bullObject = new GameObject();
         bullObject.AddComponent<Bullet>();
-
+        
 
         // Ensure both objects have colliders
         gameObject.AddComponent<PolygonCollider2D>();
@@ -45,7 +46,7 @@ public class EnemySoundTest
         AudioSource enemyAudio = new AudioSource();
         enemyAudio.GetComponent<Enemy>().GetComponent<AudioSource>();
         //enemyAudio.GetComponent<AudioSource>();
-
+        
         yield return new WaitForSeconds(10);
 
 
@@ -96,6 +97,7 @@ public class EnemySoundTest
     //        championSound.volume = originalVolume;  //Reset the volume
     //    }
     //}
+=======
 
 //public class EnemySoundTest
 //{
@@ -199,4 +201,4 @@ public class EnemySoundTest
 //        championSound.volume = originalVolume;  //Reset the volume
 //    }
 //}
-
+>>>>>>> 8c1c696d7279c28e8d9708517574164ffa19b89f
