@@ -9,6 +9,9 @@ TagManager:
   - TestBullet
   - Obstacle
   - Boundary
+  - PowerUp
+  - Weapon
+  - obstacle
   layers:
   - Default
   - TransparentFX
