@@ -20,7 +20,7 @@ public class AnimationStressTest : MonoBehaviour
         }
 
          // Load dummy scene
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Andrew's Test Scene");
 
     }
 

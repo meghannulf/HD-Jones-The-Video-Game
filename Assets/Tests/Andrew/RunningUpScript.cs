@@ -1,7 +1,7 @@
 /* 
- * Filename: RunningDownScript.cs
+ * Filename: RunningUpScript.cs
  * Developer: Andrew Bonilla
- * Purpose: Testing animation state parameters
+ * Purpose: Testing animations state parameters 
  */
 
 using System.Collections;
@@ -11,7 +11,7 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.SceneManagement;
 
-public class RunningDownTestScript
+public class RunningUpTestScript
 {
     private HotdogAnimatorController hotdogController;
 
@@ -22,22 +22,22 @@ public class RunningDownTestScript
     }
 
     [UnityTest]
-    public IEnumerator RunningDownAnimatorParameterIsSetCorrectly()
+    public IEnumerator RunningUpAnimatorParameterIsSetCorrectly()
     {
         // Arrange
         GameObject hotdogGameObject = GameObject.FindGameObjectWithTag("Player");
         HotdogAnimatorController hotdogController = hotdogGameObject.AddComponent<HotdogAnimatorController>();
-         
+
 
         // Act
-        MovingDownState movingDownState = new MovingDownState(hotdogController);
-        hotdogController.SetState(movingDownState);
+        MovingUpState movingUpState = new MovingUpState(hotdogController);
+        hotdogController.SetState(movingUpState);
 
         // Yield to allow one frame for the animator to update
         yield return new WaitForSeconds(5f);
 
         // Assert
         Animator animator = hotdogController.GetAnimator();
-        Assert.IsTrue(animator.GetBool("RunningDown"), "RunningDown parameter should be true when in MovingDownState");
+        Assert.IsTrue(animator.GetBool("RunningUp"), "RunningUp parameter should be true when in MovingUpState");
     }
 }
