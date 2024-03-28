@@ -1,16 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using NUnit.Framework;
-using UnityEditor;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using NUnit.Framework;
 
-
-public class PlayerTargetTest : MonoBehaviour
+public class PlayerTargetTest
 {
     [SetUp]
     public void Setup()
@@ -18,35 +12,39 @@ public class PlayerTargetTest : MonoBehaviour
         SceneManager.LoadScene("TestingScene");
     }
     
-    //Test will spawn 100 players and the enemy will have to target them all for it to pass
-    [UnityTest]
+    [UnityTest] //creates 100 players and has enemies target the
     public IEnumerator TestPlayerTarget()
     {
-        GameObject playerObj = new GameObject("Player", typeof(BoxCollider2D), typeof(SpriteRenderer));
-        int i = 0;
-        int y = 0;
+        int targetCount = 0;
         
-        while (i < 100){
-            GameObject.Instantiate(playerObj); 
-            i++;
-            Debug.Log(i + " instances of playerObj created.");
+        for (int i = 0; i < 100; i++)
+        {
+            GameObject playerObj = GameObject.CreatePrimitive(PrimitiveType.Cube); 
+            Debug.Log((i + 1) + " instances of playerObj created.");
             
             if (GameObject.FindGameObjectWithTag("Player"))
             {
-                y++;
-                Debug.Log(y + " instances of playerObj targeted.");
+                targetCount++;
+                Debug.Log(targetCount + " instances of playerObj targeted.");
             }
-            Destroy(playerObj);
+            
+            MyDestroyer.DestroyObject(playerObj);
             yield return null;
         }
-        yield return null; 
 
-       
-        Assert.True(false); 
+        Assert.AreEqual(100, targetCount); // Assert that all players were targeted
     }
 
     [TearDown]
     public void Teardown()
     {
+    }
+}
+
+public class MyDestroyer {
+    public static void DestroyObject(GameObject obj) {
+        if(obj != null) {
+            GameObject.Destroy(obj);
+        }
     }
 }
