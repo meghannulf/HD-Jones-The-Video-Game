@@ -779,6 +779,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1223579684928780655, guid: 03b6a75a9c5e78f4987197b3ac1fc388, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1721821548, guid: 68216c1bd02f19a498e23bb6518de964, type: 3}
+    - target: {fileID: 1223579684928780655, guid: 03b6a75a9c5e78f4987197b3ac1fc388, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223579684928780655, guid: 03b6a75a9c5e78f4987197b3ac1fc388, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223579684928780655, guid: 03b6a75a9c5e78f4987197b3ac1fc388, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3869320712289197520, guid: 03b6a75a9c5e78f4987197b3ac1fc388, type: 3}
       propertyPath: m_Name
       value: Treevle
@@ -919,6 +935,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1223579684928780655, guid: 03b6a75a9c5e78f4987197b3ac1fc388, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1721821548, guid: 68216c1bd02f19a498e23bb6518de964, type: 3}
+    - target: {fileID: 1223579684928780655, guid: 03b6a75a9c5e78f4987197b3ac1fc388, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223579684928780655, guid: 03b6a75a9c5e78f4987197b3ac1fc388, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223579684928780655, guid: 03b6a75a9c5e78f4987197b3ac1fc388, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3869320712289197520, guid: 03b6a75a9c5e78f4987197b3ac1fc388, type: 3}
       propertyPath: m_Name
       value: Treevle (2)
@@ -1263,6 +1295,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1223579684928780655, guid: 03b6a75a9c5e78f4987197b3ac1fc388, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1721821548, guid: 68216c1bd02f19a498e23bb6518de964, type: 3}
+    - target: {fileID: 1223579684928780655, guid: 03b6a75a9c5e78f4987197b3ac1fc388, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223579684928780655, guid: 03b6a75a9c5e78f4987197b3ac1fc388, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223579684928780655, guid: 03b6a75a9c5e78f4987197b3ac1fc388, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3869320712289197520, guid: 03b6a75a9c5e78f4987197b3ac1fc388, type: 3}
       propertyPath: m_Name
       value: Treevle (1)
@@ -1664,7 +1712,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5666415181076745859, guid: 80cc7690a69b44db8ac9fb41f0044247, type: 3}
-    - {fileID: -4551912486030417056, guid: 80cc7690a69b44db8ac9fb41f0044247, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1856390443957254240, guid: 80cc7690a69b44db8ac9fb41f0044247, type: 3}
@@ -1692,6 +1739,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 936153461}
     m_Modifications:
+    - target: {fileID: -626213235615268593, guid: 6def5f63ea2ee424f84bb98cf14d3616, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1376249208990606286, guid: 6def5f63ea2ee424f84bb98cf14d3616, type: 3}
       propertyPath: m_Name
       value: Weapon

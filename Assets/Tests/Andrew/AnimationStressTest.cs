@@ -41,7 +41,8 @@ public class AnimationStressTest : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
 
-        yield return new WaitForSeconds(5f);
+        yield return null;
+        Assert.True(false); // Something went wrong
 
         SceneManager.LoadScene("SampleScene");
     }
